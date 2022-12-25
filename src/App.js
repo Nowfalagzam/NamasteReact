@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+const heading = React.createElement(
+  "h1",
+  {
+    id: "title",
+  },
+  "Heading 1"
+);
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const heading2 = React.createElement(
+  "h2",
+  {
+    id: "title",
+  },
+  "Heading 2"
+);
 
-export default App;
+const container = React.createElement(
+  "div",
+  {
+    id: "container",
+  },
+  [heading, heading2]
+);
+
+console.log(heading);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+//passing a react element inside the root
+
+//async defer
+root.render(container);
